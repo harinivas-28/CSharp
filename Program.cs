@@ -1,13 +1,50 @@
-﻿using System; // we can use classes from the System namespace
+﻿using System;
+using System.Linq;
 
-namespace HelloWorld // namespace is a container for classes and other namespaces
+namespace Basics
 {
     class Program
     {
+        static void MyMethod()
+        {
+            Console.WriteLine("My Own Method!");
+        }
+
+        static void PrintName(string fname)
+        {
+            Console.WriteLine(fname + " Print Name function");
+        }
+
+        // default parameter
+        static void PrintCountry(string country = "India")
+        {
+            Console.WriteLine(country);
+        }
+
+        static int FiveTimes(int times)
+        {
+            return 5 * times;
+        }
+
+        static int sum(int x, int y)
+        {
+            return x + y;
+        }
+
+        static double sum(double x, double y)
+        {
+            return x + y;
+        }
+
+        static void printChilds(string child1, string child2, string child3)
+        {
+            Console.WriteLine("The youngest child is: " + child3);
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            Console.Write(" This will print on the same line");
+            Console.Write("This will print on the same line ");
             Console.WriteLine(3 + 3);
             // This is a single line comment
             /* This is a
@@ -59,12 +96,16 @@ namespace HelloWorld // namespace is a container for classes and other namespace
             // Booleans
             bool isCSharpFun = true;
             Console.WriteLine(isCSharpFun);
-            if (age > 18 && age < 100) 
+            if (age > 18 && age < 100)
             {
                 Console.WriteLine("Can Vote!");
-            } else if (age>100){
+            }
+            else if (age > 100)
+            {
                 Console.WriteLine("Die Bro!");
-            } else {
+            }
+            else
+            {
                 Console.WriteLine("Cannot Vote!");
             }
             // ternary is similar in java
@@ -87,7 +128,8 @@ namespace HelloWorld // namespace is a container for classes and other namespace
             }
             // while and for loops are same as in the java;
             string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
-            foreach(string i in cars){
+            foreach (string i in cars)
+            {
                 Console.WriteLine(i);
             }
             // loop control statements like break and continue are similar to java
@@ -96,8 +138,30 @@ namespace HelloWorld // namespace is a container for classes and other namespace
             //names = {"Volvo", "BMW","Ford", "Mazda"}; This is Wrong
             names = new string[] { "Volvo", "BMW", "Ford", "Mazda" };
             int[] nums = { 1, 2, 4 };
-            Console.WriteLine(string.Join(", ", nums)); // 1, 2, 3
-
+            Console.WriteLine(string.Join(", ", nums)); // 1, 2, 4
+            Array.Sort(names);
+            Console.WriteLine(string.Join(", ", names));
+            int[] myNumbers = { 5, 1, 8, 9 };
+            Console.WriteLine(myNumbers.Max());
+            Console.WriteLine(myNumbers.Min());
+            Console.WriteLine(myNumbers.Sum());
+            // multi-dimensional array
+            int[,] numbers = { { 1, 4, 2 }, { 3, 6, 8 } };
+            int[,,] threeDArray = { { { 1 } }, { { 2 } }, { { 3 } } };
+            Console.WriteLine(numbers[0, 2]);
+            numbers[0, 0] = 5;
+            Console.WriteLine(numbers[0, 0]);
+            // methods
+            MyMethod();
+            PrintName("Harinivas");
+            PrintCountry();
+            PrintCountry("Norway");
+            int _ = FiveTimes(5);
+            int result2 = sum(5, 4);
+            // named arguments
+            printChilds(child3: "John", child1: "Liam", child2: "Liam");
+            // method overloading 
+            double result3 = sum(4.3, 6.26);
         }
     }
 }
