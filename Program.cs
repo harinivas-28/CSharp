@@ -162,6 +162,21 @@ namespace Basics
             printChilds(child3: "John", child1: "Liam", child2: "Liam");
             // method overloading 
             double result3 = sum(4.3, 6.26);
+
+            // OOPS
+            Car car = new Car();
+            Console.WriteLine(car.color);
+            Console.WriteLine(car.maxSpeed);
+            car.fullThrotle();
+            car.model = "Mustang";
+            car.year = 1969;
+            // A static method can be accessed without creating an object of the class, while public methods can only be accessed by objects.
+            Person p1 = new Person();
+            p1.Name = "Harinivas";
+            p1.Age = 20;
+            Console.WriteLine("Name: " + p1.Name + ", Age: " + p1.Age);
+            // Inheritance
+            car.honk();
         }
     }
 }
