@@ -2,6 +2,32 @@
 
 namespace Basics
 {
+    interface AquaticAnimal
+    {
+        void swim();
+    }
+    class Fish : AquaticAnimal
+    {
+        public void swim()
+        {
+            Console.WriteLine("Fish Swiming");
+        }
+    }
+    abstract class Animal
+    {
+        public abstract void animalSound();
+        public void sleep()
+        {
+            Console.WriteLine("Zzz");
+        }
+    }
+    class Pig : Animal
+    {
+        public override void animalSound()
+        {
+            Console.WriteLine("The pig says: wee wee");
+        }
+    }
     sealed class RootClass
     {
         public RootClass()
@@ -62,5 +88,18 @@ namespace Basics
         {
             Console.WriteLine("Oops object created!");
         }
+    }
+    // An enum is a special "class" that represents a group of constants (unchangeable/read-only variables).
+    enum Level
+    {
+        Low, Medium, High
+    }
+    enum Days
+    {
+        Monday,
+        Tuesday,
+        Friday = 5,
+        Saturday,
+        Sunday
     }
 }

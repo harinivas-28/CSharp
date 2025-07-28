@@ -177,6 +177,14 @@ namespace Basics
             Console.WriteLine("Name: " + p1.Name + ", Age: " + p1.Age);
             // Inheritance
             car.honk();
+            // Abstract Classes and interfaces
+            Pig pig = new Pig();
+            pig.animalSound();
+            Fish fish = new Fish();
+            fish.swim();
+            // enums
+            Console.WriteLine(Level.Medium);
+            Console.WriteLine(Days.Sunday);
         }
     }
 }
