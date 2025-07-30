@@ -188,6 +188,9 @@ namespace Basics
             Console.WriteLine(Days.Sunday);
             // Files
             Files files = new();
+            // Exceptions
+            ExceptionsP ex = new();
+            ExceptionsP.CheckAge(age);
         }
     }
 }
