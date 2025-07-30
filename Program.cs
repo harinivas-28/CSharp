@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Program;
 
 namespace Basics
 {
@@ -185,6 +186,8 @@ namespace Basics
             // enums
             Console.WriteLine(Level.Medium);
             Console.WriteLine(Days.Sunday);
+            // Files
+            Files files = new();
         }
     }
 }
